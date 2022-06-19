@@ -1,5 +1,8 @@
-FROM node:14-alpine AS development
-ENV NODE_ENV development
+FROM alpine:3.15
+
+ENV NODE_VERSION 16.15.1
+
+
 # Add a work directory
 WORKDIR /frontend
 
