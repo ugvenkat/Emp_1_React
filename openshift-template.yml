@@ -15,7 +15,7 @@ objects:
   metadata:
     labels:
       app: ${NAME}
-      app.kubernetes.io/component: react-hello-world
+      app.kubernetes.io/component: react-emp
       app.kubernetes.io/instance: ${NAME}
     name: ${NAME}
   spec:
@@ -43,7 +43,7 @@ objects:
   metadata:
     labels:
       app: ${NAME}
-      app.kubernetes.io/component: react-hello-world
+      app.kubernetes.io/component: react-emp
       app.kubernetes.io/instance: ${NAME}
     name: ${NAME}
   spec:
@@ -58,7 +58,7 @@ objects:
         containers:
         - image: ${NAME}
           imagePullPolicy: Always
-          name: react-hello-world
+          name: react-emp
           ports:
           - containerPort: 8080
             protocol: TCP
@@ -76,7 +76,7 @@ objects:
       imageChangeParams:
         automatic: true
         containerNames:
-        - react-hello-world
+        - react-emp
         from:
           kind: ImageStreamTag
           name: ${NAME}:latest
@@ -85,7 +85,7 @@ objects:
   metadata:
     labels:
       app: ${NAME}
-      app.kubernetes.io/component: react-hello-world
+      app.kubernetes.io/component: react-emp
       app.kubernetes.io/instance: ${NAME}
     name: ${NAME}
   spec:
@@ -102,7 +102,7 @@ objects:
   metadata:
     labels:
       app: ${NAME}
-      app.kubernetes.io/component: react-hello-world
+      app.kubernetes.io/component: react-emp
       app.kubernetes.io/instance: ${NAME}
     name: nginx
   spec:
@@ -122,7 +122,7 @@ objects:
   metadata:
     labels:
       app: ${NAME}
-      app.kubernetes.io/component: react-hello-world
+      app.kubernetes.io/component: react-emp
       app.kubernetes.io/instance: ${NAME}
     name: ${NAME}
   spec:
@@ -133,7 +133,7 @@ objects:
   metadata:
     labels:
       app: ${NAME}
-      app.kubernetes.io/component: react-hello-world
+      app.kubernetes.io/component: react-emp
       app.kubernetes.io/instance: ${NAME}
     name: ${NAME}
   spec:
@@ -151,19 +151,19 @@ parameters:
   displayName: Name
   name: NAME
   required: true
-  value: react-hello-world
+  value: react-emp
 - description: The URL of the repository with your application source code.
   displayName: Git Repository URL
   name: SOURCE_REPOSITORY_URL
   required: true
-  value: https://github.com/monodot/container-up.git
+  value: https://github.com/ugvenkat/Emp_1_React.git
 - description: Set this to a branch name, tag or other ref of your repository if you
     are not using the default branch.
   displayName: Git Reference
   name: SOURCE_REPOSITORY_REF
-  value: master
+  value: main
 - description: Set this to the relative path to your project if it is not in the root
     of your repository.
   displayName: Context Directory
   name: CONTEXT_DIR
-  value: react-hello-world
+  value: react-emp
